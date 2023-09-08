@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" href="style3.css">
+         
+</head>
+<body>
+         
+	<div class="box">
+		<form autocomplete="off">
+			<h2>Login Here </h2>
+			<div class="inputBox">
+				<input type="text" required="required">
+				<span>Userame</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required">
+				<span>Password</span>
+				<i></i>
+			</div>
+			<div class="links">
+				<a href="#">Forgot Password ?</a>
+				<a href="#">Signup</a>
+			</div>
+			<input type="submit" value="Login">
+		</form>
+	</div>
+<body>
+<script>  
+function chk()
+{  
+var u=document.myform.user.value;  
+var x=document.myform.pass.value; 
+var p=parseInt(x)
+  if(u=="aditya" && p=="1234567")
+{ 
+  alert ("Login successfully");
+  open("wt2.html"); // Redirecting to other page.
+return false;
+} 
+else if (u==null || u=="")
+{  
+  alert("Name can't be blank");  
+ 
+  return false;  
+}
+else if(p.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  } 
+  
+  
+else if(u!="aditya" && p!="1234567")
+{
+   alert("you are not valid user or set correct");
+  
+}
+}
+<input  class="sub" type="submit" value="login" onclick="chk()"><br><br>
+</script> 
+</body>
+</html>
